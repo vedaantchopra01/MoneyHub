@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Hub - Your Financial Partner</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="20" cy="20" r="20" fill="url(#gradient1)"/>
+                    <path d="M15 12h10v16H15z" fill="white"/>
+                    <circle cx="20" cy="20" r="3" fill="#667eea"/>
+                    <defs>
+                        <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#667eea"/>
+                            <stop offset="100%" style="stop-color:#764ba2"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span>Money Hub</span>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="transactions.html">Transactions</a></li>
+                    <li><a href="cashbacks.html">Cashbacks</a></li>
+                    <li><a href="offers.html">Offers</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#login" class="login-btn">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Welcome to 
+                    <span class="text-gradient">Money Hub</span>
+                </h1>
+                <p class="hero-subtitle">Your Complete Financial Solution</p>
+                <p class="hero-description">Experience seamless digital payments, exciting cashback offers, and comprehensive financial services all in one place.</p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <circle cx="20" cy="20" r="20" fill="#667eea" opacity="0.1"/>
+                                <path d="M20 10v20M10 20h20" stroke="#667eea" stroke-width="3"/>
+                            </svg>
+                        </div>
+                        <div class="stat-text">
+                            <h3>50M+</h3>
+                            <p>Users</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <circle cx="20" cy="20" r="20" fill="#764ba2" opacity="0.1"/>
+                                <path d="M15 15l10 10M15 25l10-10" stroke="#764ba2" stroke-width="3"/>
+                            </svg>
+                        </div>
+                        <div class="stat-text">
+                            <h3>₹1B+</h3>
+                            <p>Transactions</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <circle cx="20" cy="20" r="20" fill="#f093fb" opacity="0.1"/>
+                                <path d="M20 10l5 10 10 5-10 5-5 10-5-10-10-5 10-5 5-10z" fill="#f093fb"/>
+                            </svg>
+                        </div>
+                        <div class="stat-text">
+                            <h3>99.9%</h3>
+                            <p>Secure</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M10 2C8.343 2 7 3.343 7 5v10c0 1.657 1.343 3 3 3h5c1.657 0 3-1.343 3-3V5c0-1.657-1.343-3-3-3h-5zm0 2h5c.552 0 1 .448 1 1v10c0 .552-.448 1-1 1h-5c-.552 0-1-.448-1-1V5c0-.552.448-1 1-1zm-2 2v2H5v2h3v2H5v2h3v2H5v2h3c0 1.657 1.343 3 3 3s3-1.343 3-3h3v-2h-3v-2h3v-2h-3v-2h3V8h-3z"/>
+                        </svg>
+                        Login
+                    </button>
+                    <button class="btn btn-secondary">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M10 2C8.343 2 7 3.343 7 5v1H5c-1.657 0-3 1.343-3 3v8c0 1.657 1.343 3 3 3h10c1.657 0 3-1.343 3-3v-8c0-1.657-1.343-3-3-3h-2V5c0-1.657-1.343-3-3-3zm0 2c.552 0 1 .448 1 1v1H9V5c0-.552.448-1 1-1zM5 9h10c.552 0 1 .448 1 1v8c0 .552-.448 1-1 1H5c-.552 0-1-.448-1-1v-8c0-.552.448-1 1-1z"/>
+                        </svg>
+                        Sign Up
+                    </button>
+                </div>
+            </div>
+            
+            <!-- hero image removed per request (Money Hub card) -->
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            <h2><i class="fas fa-user"></i> Login to Money Hub</h2>
+            <form class="auth-form">
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address" required>
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" required>
+                    <i class="fas fa-lock"></i>
+                </div>
+                <button type="submit" class="btn btn-primary full-width">Login</button>
+                <p class="auth-link">Don't have an account? <a href="#" onclick="switchToSignup()">Sign Up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('signupModal')">&times;</span>
+            <h2><i class="fas fa-user-plus"></i> Join Money Hub</h2>
+            <form class="auth-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Full Name" required>
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address" required>
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Phone Number" required>
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" required>
+                    <i class="fas fa-lock"></i>
+                </div>
+                <button type="submit" class="btn btn-primary full-width">Sign Up</button>
+                <p class="auth-link">Already have an account? <a href="#" onclick="switchToLogin()">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="dashboard">
+        <div class="container">
+            <h2>
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                    <circle cx="15" cy="15" r="15" fill="#667eea" opacity="0.2"/>
+                    <path d="M15 5v20M5 15h20" stroke="#667eea" stroke-width="2"/>
+                </svg>
+                Dashboard
+            </h2>
+            <div class="dashboard-cards">
+                <div class="card">
+                    <div class="card-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="20" fill="#4CAF50" opacity="0.1"/>
+                            <path d="M20 10v20M15 15l5-5 5 5M15 25l5 5 5-5" stroke="#4CAF50" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="card-content">
+                        <h3>Total Balance</h3>
+                        <p class="amount">₹25,450.00</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="20" fill="#2196F3" opacity="0.1"/>
+                            <path d="M15 15h10v15H15zM20 10v5M15 10h10" stroke="#2196F3" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="card-content">
+                        <h3>Credit Limit</h3>
+                        <p class="amount">₹50,000.00</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="20" fill="#FF9800" opacity="0.1"/>
+                            <path d="M20 10l5 5-5 5-5-5 5-5zM15 20l5 5 5-5-5-5-5 5z" fill="#FF9800"/>
+                        </svg>
+                    </div>
+                    <div class="card-content">
+                        <h3>Cashback Earned</h3>
+                        <p class="amount">₹1,250.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transaction History -->
+    <section id="transactions" class="transactions">
+        <div class="container">
+            <h2 class="section-title">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                    <circle cx="15" cy="15" r="15" fill="#667eea" opacity="0.2"/>
+                    <path d="M5 15h20M15 5l10 10-10 10" stroke="#667eea" stroke-width="2"/>
+                </svg>
+                Transaction History
+            </h2>
+            <div class="transaction-list">
+                <div class="transaction-item">
+                    <div class="transaction-icon">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <circle cx="15" cy="15" r="15" fill="#4CAF50" opacity="0.1"/>
+                            <path d="M10 15l5 5 5-5M15 10v10" stroke="#4CAF50" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="transaction-details">
+                        <h4>Amazon Purchase</h4>
+                        <p>Dec 15, 2023 • 2:30 PM</p>
+                    </div>
+                    <div class="transaction-amount debit">-₹2,499.00</div>
+                </div>
+                <div class="transaction-item">
+                    <div class="transaction-icon">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <circle cx="15" cy="15" r="15" fill="#FF9800" opacity="0.1"/>
+                            <path d="M10 15l5 5 5-5M15 10v10" stroke="#FF9800" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="transaction-details">
+                        <h4>Zomato Order</h4>
+                        <p>Dec 14, 2023 • 8:45 PM</p>
+                    </div>
+                    <div class="transaction-amount debit">-₹450.00</div>
+                </div>
+                <div class="transaction-item">
+                    <div class="transaction-icon">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <circle cx="15" cy="15" r="15" fill="#2196F3" opacity="0.1"/>
+                            <path d="M10 15l5 5 5-5M15 10v10" stroke="#2196F3" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="transaction-details">
+                        <h4>Salary Credit</h4>
+                        <p>Dec 1, 2023 • 9:00 AM</p>
+                    </div>
+                    <div class="transaction-amount credit">+₹45,000.00</div>
+                </div>
+                <div class="transaction-item">
+                    <div class="transaction-icon">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <circle cx="15" cy="15" r="15" fill="#9C27B0" opacity="0.1"/>
+                            <path d="M10 15l5 5 5-5M15 10v10" stroke="#9C27B0" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="transaction-details">
+                        <h4>Fuel Payment</h4>
+                        <p>Nov 30, 2023 • 6:15 PM</p>
+                    </div>
+                    <div class="transaction-amount debit">-₹3,200.00</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cashbacks Section -->
+    <section class="cashbacks">
+        <div class="container">
+            <h2>
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                    <circle cx="15" cy="15" r="15" fill="#667eea" opacity="0.2"/>
+                    <path d="M15 25s-8-5-8-10 8-10 8-10 8 5 8 10-8 10-8 10z" fill="#667eea"/>
+                </svg>
+                Cashbacks & Rewards
+            </h2>
+            <div class="cashback-grid">
+                <div class="cashback-card">
+                    <div class="cashback-header">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="20" fill="#4CAF50" opacity="0.1"/>
+                            <path d="M20 10l5 15h15l-12 10 5 15-13-10-13 15 5-15-12-10h15l5-15z" fill="#4CAF50"/>
+                        </svg>
+                        <h3>Shopping Cashback</h3>
+                    </div>
+                    <div class="cashback-amount">5% Back</div>
+                    <p>On all online shopping</p>
+                </div>
+                <div class="cashback-card">
+                    <div class="cashback-header">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="20" fill="#FF9800" opacity="0.1"/>
+                            <path d="M20 10l5 15h15l-12 10 5 15-13-10-13 15 5-15-12-10h15l5-15z" fill="#FF9800"/>
+                        </svg>
+                        <h3>Food & Dining</h3>
+                    </div>
+                    <div class="cashback-amount">10% Back</div>
+                    <p>On food delivery & restaurants</p>
+                </div>
+                <div class="cashback-card">
+                    <div class="cashback-header">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="20" fill="#2196F3" opacity="0.1"/>
+                            <path d="M20 10l5 15h15l-12 10 5 15-13-10-13 15 5-15-12-10h15l5-15z" fill="#2196F3"/>
+                        </svg>
+                        <h3>Fuel Rewards</h3>
+                    </div>
+                    <div class="cashback-amount">2% Back</div>
+                    <p>On fuel purchases</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurant Brand Offers -->
+    <section class="restaurant-offers">
+        <div class="container">
+            <h2><i class="fas fa-utensils"></i> Restaurant Brand Offers</h2>
+            <p class="section-subtitle">Exclusive deals from your favorite restaurants</p>
+            <div class="restaurant-grid">
+                <div class="restaurant-card" data-brand="zomato">
+                    <div class="restaurant-logo">
+                        <svg width="60" height="60" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="45" fill="#e23744"/>
+                            <text x="50" y="58" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Z</text>
+                        </svg>
+                    </div>
+                    <h3>Zomato</h3>
+                    <div class="offer-badge-new">50% OFF</div>
+                    <p>Up to ₹200 cashback on first order</p>
+                    <div class="restaurant-features">
+                        <span>Free Delivery</span>
+                        <span>Quick Service</span>
+                    </div>
+                </div>
+                
+                <div class="restaurant-card" data-brand="swiggy">
+                    <div class="restaurant-logo">
+                        <svg width="60" height="60" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="45" fill="#fc8019"/>
+                            <text x="50" y="58" text-anchor="middle" fill="white" font-size="16" font-weight="bold">S</text>
+                        </svg>
+                    </div>
+                    <h3>Swiggy</h3>
+                    <div class="offer-badge-new">40% OFF</div>
+                    <p>Flat ₹150 off on orders above ₹500</p>
+                    <div class="restaurant-features">
+                        <span>Super Fast</span>
+                        <span>Live Tracking</span>
+                    </div>
+                </div>
+                
+                <div class="restaurant-card" data-brand="dominos">
+                    <div class="restaurant-logo">
+                        <svg width="60" height="60" viewBox="0 0 100 100">
+                            <rect x="10" y="10" width="80" height="80" rx="15" fill="#0078ae"/>
+                            <circle cx="35" cy="35" r="8" fill="white"/>
+                            <circle cx="65" cy="35" r="8" fill="white"/>
+                            <circle cx="35" cy="65" r="8" fill="white"/>
+                        </svg>
+                    </div>
+                    <h3>Domino's</h3>
+                    <div class="offer-badge-new">Buy 1 Get 1</div>
+                    <p>Free pizza on orders above ₹599</p>
+                    <div class="restaurant-features">
+                        <span>30 Min Delivery</span>
+                        <span>Hot & Fresh</span>
+                    </div>
+                </div>
+                
+                <div class="restaurant-card" data-brand="kfc">
+                    <div class="restaurant-logo">
+                        <svg width="60" height="60" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="45" fill="#f40027"/>
+                            <text x="50" y="58" text-anchor="middle" fill="white" font-size="14" font-weight="bold">KFC</text>
+                        </svg>
+                    </div>
+                    <h3>KFC</h3>
+                    <div class="offer-badge-new">25% OFF</div>
+                    <p>Crispy chicken deals starting ₹99</p>
+                    <div class="restaurant-features">
+                        <span>Finger Lickin'</span>
+                        <span>Original Recipe</span>
+                    </div>
+                </div>
+                
+                <div class="restaurant-card" data-brand="mcdonalds">
+                    <div class="restaurant-logo">
+                        <svg width="60" height="60" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="45" fill="#ffc72c"/>
+                            <path d="M30 35 Q40 25 50 35 Q60 25 70 35 L70 65 Q60 55 50 65 Q40 55 30 65 Z" fill="#da020e"/>
+                        </svg>
+                    </div>
+                    <h3>McDonald's</h3>
+                    <div class="offer-badge-new">₹199 Meal</div>
+                    <p>Happy meals and combo offers</p>
+                    <div class="restaurant-features">
+                        <span>I'm Lovin' It</span>
+                        <span>Happy Meals</span>
+                    </div>
+                </div>
+                
+                <div class="restaurant-card" data-brand="subway">
+                    <div class="restaurant-logo">
+                        <svg width="60" height="60" viewBox="0 0 100 100">
+                            <rect x="10" y="10" width="80" height="80" rx="10" fill="#00543d"/>
+                            <text x="50" y="45" text-anchor="middle" fill="#ffff00" font-size="12" font-weight="bold">SUB</text>
+                            <text x="50" y="65" text-anchor="middle" fill="#ffff00" font-size="12" font-weight="bold">WAY</text>
+                        </svg>
+                    </div>
+                    <h3>Subway</h3>
+                    <div class="offer-badge-new">Buy 2 Get 1</div>
+                    <p>Fresh subs with extra toppings free</p>
+                    <div class="restaurant-features">
+                        <span>Eat Fresh</span>
+                        <span>Customizable</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offers Section -->
+    <section id="offers" class="offers">
+        <div class="container">
+            <h2><i class="fas fa-tags"></i> Exclusive Offers</h2>
+            
+            <!-- Debit Card Offers -->
+            <div class="offer-category">
+                <h3><i class="fas fa-credit-card"></i> Debit Card Offers</h3>
+                <div class="offer-grid">
+                    <div class="offer-card">
+                        <div class="offer-badge">Limited Time</div>
+                        <h4>Flipkart Debit Card</h4>
+                        <p>Get 5% cashback on all purchases + Free delivery</p>
+                        <button class="btn btn-primary">Apply Now</button>
+                    </div>
+                    <div class="offer-card">
+                        <div class="offer-badge">Popular</div>
+                        <h4>Grocery Debit Card</h4>
+                        <p>10% cashback on grocery shopping up to ₹500/month</p>
+                        <button class="btn btn-primary">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Credit Card Offers -->
+            <div class="offer-category">
+                <h3><i class="fas fa-credit-card"></i> Credit Card Offers</h3>
+                <div class="offer-grid">
+                    <div class="offer-card">
+                        <div class="offer-badge">Premium</div>
+                        <h4>Money Hub Platinum</h4>
+                        <p>Unlimited cashback + Airport lounge access</p>
+                        <button class="btn btn-primary">Apply Now</button>
+                    </div>
+                    <div class="offer-card">
+                        <div class="offer-badge">Best Seller</div>
+                        <h4>Travel Rewards Card</h4>
+                        <p>Earn 2X points on travel + No foreign transaction fees</p>
+                        <button class="btn btn-primary">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EMI Options -->
+            <div class="offer-category">
+                <h3><i class="fas fa-calculator"></i> EMI Options</h3>
+                <div class="emi-options">
+                    <div class="emi-card">
+                        <h4>0% EMI</h4>
+                        <p>Convert purchases above ₹5,000 to 0% EMI</p>
+                        <div class="emi-terms">
+                            <span>3 months</span>
+                            <span>6 months</span>
+                            <span>12 months</span>
+                        </div>
+                    </div>
+                    <div class="emi-card">
+                        <h4>Instant EMI</h4>
+                        <p>Convert any transaction to EMI instantly</p>
+                        <div class="emi-terms">
+                            <span>Low Interest</span>
+                            <span>Flexible Terms</span>
+                            <span>Quick Approval</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Restaurant Brand Offers -->
+        <section id="restaurant-offers" class="section">
+            <div class="container">
+                <h2 class="section-title">Restaurant Brand Offers</h2>
+                <div class="restaurant-offers-grid">
+                    <div class="restaurant-offer-card">
+                        <div class="restaurant-logo">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="30" cy="30" r="30" fill="#E23744"/>
+                                <path d="M20 25h20v10H20z" fill="white"/>
+                                <text x="30" y="32" text-anchor="middle" fill="#E23744" font-size="8" font-weight="bold">ZOMATO</text>
+                            </svg>
+                        </div>
+                        <h3>Zomato</h3>
+                        <p class="offer-text">Get 50% OFF up to ₹100</p>
+                        <p class="offer-details">On orders above ₹199</p>
+                        <div class="offer-features">
+                            <span class="feature-tag">Free Delivery</span>
+                            <span class="feature-tag">No Surge Fee</span>
+                        </div>
+                        <button class="offer-btn">Order Now</button>
+                    </div>
+
+                    <div class="restaurant-offer-card">
+                        <div class="restaurant-logo">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="30" cy="30" r="30" fill="#FC8019"/>
+                                <path d="M15 20h30v20H15z" fill="white"/>
+                                <text x="30" y="32" text-anchor="middle" fill="#FC8019" font-size="8" font-weight="bold">SWIGGY</text>
+                            </svg>
+                        </div>
+                        <h3>Swiggy</h3>
+                        <p class="offer-text">Flat 60% OFF</p>
+                        <p class="offer-details">On first 3 orders</p>
+                        <div class="offer-features">
+                            <span class="feature-tag">Super Fast</span>
+                            <span class="feature-tag">Live Tracking</span>
+                        </div>
+                        <button class="offer-btn">Order Now</button>
+                    </div>
+
+                    <div class="restaurant-offer-card">
+                        <div class="restaurant-logo">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="30" cy="30" r="30" fill="#0078D4"/>
+                                <path d="M20 22h20v16H20z" fill="white"/>
+                                <text x="30" y="32" text-anchor="middle" fill="#0078D4" font-size="7" font-weight="bold">DOMINO'S</text>
+                            </svg>
+                        </div>
+                        <h3>Domino's Pizza</h3>
+                        <p class="offer-text">Buy 1 Get 1 FREE</p>
+                        <p class="offer-details">On medium pizzas</p>
+                        <div class="offer-features">
+                            <span class="feature-tag">30 Min Delivery</span>
+                            <span class="feature-tag">Hot & Fresh</span>
+                        </div>
+                        <button class="offer-btn">Order Now</button>
+                    </div>
+
+                    <div class="restaurant-offer-card">
+                        <div class="restaurant-logo">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="30" cy="30" r="30" fill="#E4002B"/>
+                                <path d="M18 24h24v12H18z" fill="white"/>
+                                <text x="30" y="32" text-anchor="middle" fill="#E4002B" font-size="9" font-weight="bold">KFC</text>
+                            </svg>
+                        </div>
+                        <h3>KFC</h3>
+                        <p class="offer-text">₹199 Chicken Bucket</p>
+                        <p class="offer-details">Save ₹100 on combo</p>
+                        <div class="offer-features">
+                            <span class="feature-tag">Finger Lickin'</span>
+                            <span class="feature-tag">Crispy</span>
+                        </div>
+                        <button class="offer-btn">Order Now</button>
+                    </div>
+
+                    <div class="restaurant-offer-card">
+                        <div class="restaurant-logo">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="30" cy="30" r="30" fill="#FFCC00"/>
+                                <path d="M15 20h30v20H15z" fill="#E4002B"/>
+                                <text x="30" y="32" text-anchor="middle" fill="#FFCC00" font-size="6" font-weight="bold">McDONALD'S</text>
+                            </svg>
+                        </div>
+                        <h3>McDonald's</h3>
+                        <p class="offer-text">McCombo at ₹149</p>
+                        <p class="offer-details">Burger + Fries + Coke</p>
+                        <div class="offer-features">
+                            <span class="feature-tag">I'm Lovin' It</span>
+                            <span class="feature-tag">Quick Bite</span>
+                        </div>
+                        <button class="offer-btn">Order Now</button>
+                    </div>
+
+        <div class="restaurant-offer-card">
+                        <div class="restaurant-logo">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="30" cy="30" r="30" fill="#00A651"/>
+                                <path d="M18 22h24v16H18z" fill="#FFCC00"/>
+                                <text x="30" y="32" text-anchor="middle" fill="#00A651" font-size="8" font-weight="bold">SUBWAY</text>
+                            </svg>
+                        </div>
+                        <h3>Subway</h3>
+                        <p class="offer-text">Any 6" Sub at ₹99</p>
+                        <p class="offer-details">Fresh & Healthy</p>
+                        <div class="offer-features">
+                            <span class="feature-tag">Eat Fresh</span>
+                            <span class="feature-tag">Customizable</span>
+                        </div>
+            <button class="offer-btn">Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-coins"></i> Money Hub</h3>
+                    <p>Your trusted financial partner for all your banking and payment needs.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="transactions.html">Transactions</a></li>
+                        <li><a href="offers.html">Offers</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Money Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Modal functions
+        function showLogin() {
+            document.getElementById('loginModal').style.display = 'block';
+        }
+
+        function showSignup() {
+            document.getElementById('signupModal').style.display = 'block';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        function switchToSignup() {
+            closeModal('loginModal');
+            showSignup();
+        }
+
+        function switchToLogin() {
+            closeModal('signupModal');
+            showLogin();
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const loginModal = document.getElementById('loginModal');
+            const signupModal = document.getElementById('signupModal');
+            if (event.target == loginModal) {
+                loginModal.style.display = 'none';
+            }
+            if (event.target == signupModal) {
+                signupModal.style.display = 'none';
+            }
+        }
+
+        // Basic scrolling for navigation links (no animation)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    // Default scroll behavior without smooth animation
+                    target.scrollIntoView();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
